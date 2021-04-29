@@ -1,0 +1,31 @@
+using System;
+					
+public class Program
+{
+	public static Tuple<int, int, int, int> Arithmetic(int a, int b, int c, int d)
+	{
+	return new Tuple<int, int, int, int>((a+b), (a-b), (c*d), (c/d));
+	}
+	public static void Main()
+	{
+		Tuple<int, int, int, int> output = Program.Arithmetic(3, 3, 12, 6);
+		Console.WriteLine("Sum: "+output.Item1+ " Sub: "+output.Item2+ " Mul: "+output.Item3+ " Div: "+output.Item4);
+		Console.ReadLine();
+	}
+}
+
+/*using System;
+					
+public class Program
+{
+	public static Tuple<int, int> Arithmetic(int a, int b)
+	{
+	return new Tuple<int, int>((a*b), (a/b));
+	}
+	public static void Main()
+	{
+		Tuple<int, int> output = Program.Arithmetic(3, 3);
+		Console.WriteLine("Sum: "+output.Item1+ " Sub: "+output.Item2);
+		Console.ReadLine();
+	}
+} */

@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+
+public class Program
+{
+	public static void Main()
+	{
+		List<int> mylist = new List<int>();
+		Console.WriteLine("Enter the Elements:");
+		int i;
+		for(i =0; i < 10; i++)
+		{
+		  mylis(i);
+		}
+		foreach(var item in mylist)
+		{
+		Console.Writeline(item);
+		}
+		if (mylist(i)%2 ==0)
+		{
+		 Console.WriteLine("Even Numbers: " + mylist(i));
+		}
+		else
+		{
+		Console.WriteLine("Odd Numbers: " + mylist(i));
+		}
+		Console.WriteLine("Enter the Elements:");
+		Console.ReadLine();
+	}
+}

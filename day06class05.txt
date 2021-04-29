@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+
+namespace SampleApplication
+public class Stock
+{
+ public int stocks;	
+ public int inventory_AS;
+ public int addstock;
+}
+public class Product:Stock
+        {
+        public string p_name;
+        public double price;
+        public int quantity;
+        public double  total;
+public static void Main()
+    {
+	Dictionary<string, int> d = new Dictionary<string, int>();
+        Product soap = new Product();
+        soap.total=soap.price*soap.quantity;
+		Console.WriteLine("Enter the Product name");
+        soap.p_name =Console.ReadLine();
+        Console.WriteLine("Enter the quantity");
+        soap.quantity =Convert.ToInt32(Console.ReadLine());
+        soap.total=(soap.price)*(soap.quantity);
+		Console.WriteLine("Enter the Price");
+        soap.price = Convert.ToDouble(Console.ReadLine());
+		Console.WriteLine("Enter the stocks available");
+        soap.stocks =Convert.ToInt32(Console.ReadLine());
+		Console.WriteLine("Enter the Amount of newly added stocks");
+        soap.addstock = Convert.ToInt32(Console.ReadLine());
+		soap.stocks=soap.stocks+soap.addstock;
+		soap.inventory_AS= soap.stocks-soap.quantity;
+		soap.total=soap.quantity*soap.price;
+		
+		
+		
+         Console.WriteLine("S.No            : "+ "1");
+         Console.WriteLine("Product         : " +soap.p_name+"   ");
+         Console.WriteLine("Price           : " +soap.price + "  ");
+         Console.WriteLine("Quantity        : " +soap.quantity+" "  );
+         Console.WriteLine("Total Price     : " +soap.total+"   " );
+         Console.WriteLine("Remaining stocks: " + soap.inventory_AS);
+         Console.ReadLine();
+    }   
+}
+}

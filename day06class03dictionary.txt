@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+
+public class Program
+{
+	public static void Main()
+	{
+		Dictionary<char, int> dictionary = new Dictionary<char, int>();
+		Console.Write("Enter the Input String : ");
+                string input = Console.ReadLine();
+		int count = 1; 
+		foreach (char letters in input)
+		{
+		 if (dictionary.ContainsKey(letters))
+                {
+                    dictionary[letters] = dictionary[letters]+1;
+			 // count = count + 1;
+			 // dictionary[letters] = count;
+                }
+                else
+                {
+                    dictionary.Add(letters, count);
+                }
+		}
+		foreach (var item in input) //foreach (var item in dictionary.Keys)
+            {
+                Console.WriteLine("Key = " +item + " Value  = " + dictionary[item]);
+            }
+		Console.ReadLine();
+	}
+}
